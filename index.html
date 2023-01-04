@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>driveneats</title>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <h1>DrivenEats</h1>
+            <h2>Sua comida em 6 minutos</h2>
+        </div>
+    </div>
+    <div class="container">
+
+
+        <div class="finish">
+            <h3>Confirme seu pedido</h3>
+            <div class="column">
+                <div class="c1">
+                    <p>Frango Yin Yang</p>
+                    <p>Coquinha gelada</p>
+                    <p>Pudim</p>
+                    <h3>TOTAL</h3>
+                </div>
+
+                <div class="c2">
+                    <p>14,90</p>
+                    <p>4,90</p>
+                    <p>7,90</p>
+                    <h3>R$ 27,70</h3>
+                </div>
+            </div>
+            <button id="b1">Tudo certo, pode pedir!</button>
+            <button id="b2">Cancelar</button>
+        </div>
+
+
+        <h2>Primeiro, seu prato</h2>
+        <div class="pratos">
+            <div id="frango1" class="card">
+                <img src="./img/frango_yin_yang.png">
+                <h3>Frango Yin Yang</h3>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <h4>R$ 14,90</h4>
+            </div>
+            <div onclick="select()" class="card">
+                <img src="./img/frango_yin_yang.png">
+                <h3>Frango Yin Yang</h3>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <h4>R$ 14,90</h4>
+            </div>
+            <div class="card">
+                <img src="./img/frango_yin_yang.png">
+                <h3>Frango Yin Yang</h3>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <h4>R$ 14,90</h4>
+            </div>
+        </div>
+        <h2>Agora, sua bebida</h2>
+        <div class="pratos">
+            <div class="card">
+                <img src="./img/coca-cola.png">
+                <h3>Coquinha gelada</h3>
+                <p>Lata 350ml</p>
+                <h4>R$ 4,90</h4>
+            </div>
+            <div class="card">
+                <img src="./img/coca-cola.png">
+                <h3>Coquinha gelada</h3>
+                <p>Lata 350ml</p>
+                <h4>R$ 4,90</h4>
+            </div>
+            <div class="card">
+                <img src="./img/coca-cola.png">
+                <h3>Coquinha gelada</h3>
+                <p>Lata 350ml</p>
+                <h4>R$ 4,90</h4>
+            </div>
+        </div>
+        <h2>Por fim, sua sobremesa</h2>
+        <div class="pratos">
+            <div class="card">
+                <img src="./img/pudim.png">
+                <h3>Pudim</h3>
+                <p>Apenas pudim</p>
+                <h4>R$ 7,90</h4>
+            </div>
+            <div class="card">
+                <img src="./img/pudim.png">
+                <h3>Pudim</h3>
+                <p>Apenas pudim</p>
+                <h4>R$ 7,90</h4>
+            </div>
+            <div class="card">
+                <img src="./img/pudim.png">
+                <h3>Pudim</h3>
+                <p>Apenas pudim</p>
+                <h4>R$ 7,90</h4>
+            </div>
+        </div>
+
+    </div>
+    <footer><button>Selecione os 3 itens<br>para fechar o pedido</button></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
