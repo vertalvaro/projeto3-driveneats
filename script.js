@@ -13,10 +13,8 @@ function selectDishes(select) {
   document.getElementById("firstPrice").innerHTML = dishPrice.replace(".", ",");
   checkOrderCondition();
 }
-
 let dishName;
 let dishPrice;
-
 function selectDrinks(select) {
   const unselect = document.querySelector(".drinks .selected");
   if (unselect !== null) {
@@ -35,10 +33,8 @@ function selectDrinks(select) {
   );
   checkOrderCondition();
 }
-
 let drinkName;
 let drinkPrice;
-
 function selectDesserts(select) {
   const unselect = document.querySelector(".desserts .selected");
   if (unselect !== null) {
@@ -57,12 +53,10 @@ function selectDesserts(select) {
   );
   checkOrderCondition();
 }
-
 let clientName;
 let clientAdress;
 let dessertName;
 let dessertPrice;
-
 function checkOrderCondition() {
   const selectedDish = document.querySelector(".dishes .selected");
   const selectedDrink = document.querySelector(".drinks .selected");
@@ -89,7 +83,6 @@ function checkOrderCondition() {
         .replace(".", ",");
   }
 }
-
 function showModal() {
   const show = document.querySelector(".modal");
   show.style.display = "flex";
@@ -97,31 +90,27 @@ function showModal() {
   askAdress();
   changeURL();
 }
-
 function hideModal() {
   const hide = document.querySelector(".modal");
   hide.style.display = "none";
 }
-
 function askName() {
   clientName = prompt("Digite seu nome");
-  return;
 }
-
 function askAdress() {
   clientAdress = prompt("Digite seu endereço para entrega");
-  return;
 }
-
 function changeURL() {
   const params = encodeURIComponent(
     `Olá, gostaria de fazer o pedido: 
     - Prato: ${dishName} 
     - Bebida: ${drinkName}
     - Sobremesa: ${dessertName}
-    Total: R$ ${
-      parseFloat(dishPrice) + parseFloat(drinkPrice) + parseFloat(dessertPrice)
-    }
+    Total: R$ ${(
+      parseFloat(dishPrice) +
+      parseFloat(drinkPrice) +
+      parseFloat(dessertPrice)
+    ).toFixed(2)}
     Nome: ${clientName}
     Endereço: ${clientAdress}`
   );
