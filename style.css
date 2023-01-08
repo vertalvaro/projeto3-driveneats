@@ -14,7 +14,10 @@ body {
 a {
   text-decoration: none;
 }
-
+a,
+button {
+  color: white;
+}
 .header {
   display: flex;
   align-items: center;
@@ -71,7 +74,13 @@ a {
   border-radius: 9px;
   row-gap: 11px;
 }
-
+footer > button > p {
+  text-align: center;
+  font-size: 20px;
+  width: 60%;
+  line-height: 23px;
+  letter-spacing: 0.018em;
+}
 .card > p {
   font-weight: 300;
   font-size: 15px;
@@ -116,19 +125,6 @@ footer > button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-footer > button > p {
-  text-align: center;
-  font-size: 20px;
-  width: 60%;
-  line-height: 23px;
-  letter-spacing: 0.018em;
-}
-
-a,
-button {
-  color: white;
 }
 
 .modal {
