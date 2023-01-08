@@ -37,6 +37,7 @@ function checkOrderCondition() {
     butao.style.fontWeight = "700";
     butao.style.fontSize = "20px";
     butao.disabled = false;
+    changeURL();
   }
 }
 function showModal() {
@@ -46,4 +47,14 @@ function showModal() {
 function hideModal() {
   const hide = document.querySelector(".modal");
   hide.style.display = "none";
+}
+
+function changeURL() {
+  const params = encodeURIComponent(
+    `Olá, gostaria de fazer o pedido: - Prato: Frango Yin Yang - Bebida: Coquinha Gelada - Sobremesa: Pudim Total: R$ ${(27.7).toFixed(
+      2
+    )}`
+  );
+  const url = "https://wa.me/5511958174303?text=" + params;
+  document.getElementById("link").href = url;
 }
