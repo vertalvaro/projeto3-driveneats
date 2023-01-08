@@ -1,126 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>driveneats</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <div>
-            <h1>DrivenEats</h1>
-            <h2>Sua comida em 6 minutos</h2>
-        </div>
+      <div>
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+      </div>
     </div>
     <div class="container">
-        <div data-test="confirm-order-modal" class="modal">
-            <div class="finish">
-                <h3>Confirme seu pedido</h3>
-                <div class="column">
-                    <div class="c1">
-                        <p>Frango Yin Yang</p>
-                        <p>Coquinha gelada</p>
-                        <p>Pudim</p>
-                        <h3>TOTAL</h3>
-                    </div>
+      <div data-test="confirm-order-modal" class="modal">
+        <div class="finish">
+          <h3>Confirme seu pedido</h3>
+          <div class="column">
+            <div class="c1">
+              <p>Frango Yin Yang</p>
+              <p>Coquinha gelada</p>
+              <p>Pudim</p>
+              <h3>TOTAL</h3>
+            </div>
 
-                    <div class="c2">
-                        <p>14,90</p>
-                        <p>4,90</p>
-                        <p>7,90</p>
-                        <h3>R$ 27,70</h3>
-                    </div>
-                </div>
-                <a data-test="confirm-order-btn"
-                    href="https://wa.me/5511958174303?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%0A-%20Prato%3A%20Frango%20Yin%20Yang%0A-%20Bebida%3A%20Coquinha%20Gelada%0A-%20Sobremesa%3A%20Pudim%0ATotal%3A%20R%24%2027.70"
-                    target="_blank" id="b1">Tudo certo, pode pedir!</a>
-                <button data-test="cancel-order-btn" onclick="hideModal()" id="b2">Cancelar</button>
+            <div class="c2">
+              <p>14,90</p>
+              <p>4,90</p>
+              <p>7,90</p>
+              <h3>R$ 27,70</h3>
             </div>
+          </div>
+          <a
+            data-test="confirm-order-btn"
+            href="https://wa.me/5511958174303?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20o%20pedido%3A%0A-%20Prato%3A%20Frango%20Yin%20Yang%0A-%20Bebida%3A%20Coquinha%20Gelada%0A-%20Sobremesa%3A%20Pudim%0ATotal%3A%20R%24%2027.70"
+            target="_blank"
+            id="b1"
+            >Tudo certo, pode pedir!</a
+          >
+          <button data-test="cancel-order-btn" onclick="hideModal()" id="b2">
+            Cancelar
+          </button>
         </div>
+      </div>
 
-
-        <h2>Primeiro, seu prato</h2>
-        <div class="dishes pratos">
-            <div data-test="dish" onclick="selectDishes(this)" class="card">
-                <img src="./img/frango_yin_yang.png">
-                <h3 data-test="item-name">Frango Yin Yang</h3>
-                <p>Um pouco de batata, um pouco de salada</p>
-                <h4 data-test="item-price">R$ 14,90</h4>
-            </div>
-            <div data-test="dish" onclick="selectDishes(this)" class="card">
-                <img src="./img/frango_yin_yang.png">
-                <h3 data-test="item-name">Frango Yin Yang</h3>
-                <p>Um pouco de batata, um pouco de salada</p>
-                <h4 data-test="item-price">R$ 14,90</h4>
-            </div>
-            <div data-test="dish" onclick="selectDishes(this)" class="card">
-                <img src="./img/frango_yin_yang.png">
-                <h3 data-test="item-name">Frango Yin Yang</h3>
-                <p>Um pouco de batata, um pouco de salada</p>
-                <h4 data-test="item-price">R$ 14,90</h4>
-            </div>
+      <h2>Primeiro, seu prato</h2>
+      <div class="dishes pratos">
+        <div data-test="dish" onclick="selectDishes(this)" class="card">
+          <img alt="produto selecionado" src="./img/frango_yin_yang.png" />
+          <h3 data-test="item-name">Frango Yin Yang</h3>
+          <p>Um pouco de batata, um pouco de salada</p>
+          <h4 data-test="item-price">R$ 14,90</h4>
         </div>
-        <h2>Agora, sua bebida</h2>
-        <div class="drinks pratos">
-            <div data-test="drink" onclick="selectDrinks(this)" class="card">
-                <img src="./img/coca-cola.png">
-                <h3 data-test="item-name">Coquinha gelada</h3>
-                <p>Lata 350ml</p>
-                <h4 data-test="item-price">R$ 4,90</h4>
-            </div>
-            <div data-test="drink" onclick="selectDrinks(this)" class="card">
-                <img src="./img/coca-cola.png">
-                <h3 data-test="item-name">Coquinha gelada</h3>
-                <p>Lata 350ml</p>
-                <h4 data-test="item-price">R$ 4,90</h4>
-            </div>
-            <div data-test="drink" onclick="selectDrinks(this)" class="card">
-                <img src="./img/coca-cola.png">
-                <h3 data-test="item-name">Coquinha gelada</h3>
-                <p>Lata 350ml</p>
-                <h4 data-test="item-price">R$ 4,90</h4>
-            </div>
+        <div data-test="dish" onclick="selectDishes(this)" class="card">
+          <img alt="produto selecionado" src="./img/frango_yin_yang.png" />
+          <h3 data-test="item-name">Frango Yin Yang</h3>
+          <p>Um pouco de batata, um pouco de salada</p>
+          <h4 data-test="item-price">R$ 14,90</h4>
         </div>
-        <h2>Por fim, sua sobremesa</h2>
-        <div class="desserts pratos">
-            <div data-test="dessert" onclick="selectDesserts(this)" class="card">
-                <img src="./img/pudim.png">
-                <h3 data-test="item-name">Pudim</h3>
-                <p>Apenas pudim</p>
-                <h4 data-test="item-price">R$ 7,90</h4>
-            </div>
-            <div data-test="dessert" onclick="selectDesserts(this)" class="card">
-                <img src="./img/pudim.png">
-                <h3 data-test="item-name">Pudim</h3>
-                <p>Apenas pudim</p>
-                <h4 data-test="item-price">R$ 7,90</h4>
-            </div>
-            <div data-test="dessert" onclick="selectDesserts(this)" class="card">
-                <img src="./img/pudim.png">
-                <h3 data-test="item-name">Pudim</h3>
-                <p>Apenas pudim</p>
-                <h4 data-test="item-price">R$ 7,90</h4>
-            </div>
+        <div data-test="dish" onclick="selectDishes(this)" class="card">
+          <img alt="produto selecionado" src="./img/frango_yin_yang.png" />
+          <h3 data-test="item-name">Frango Yin Yang</h3>
+          <p>Um pouco de batata, um pouco de salada</p>
+          <h4 data-test="item-price">R$ 14,90</h4>
         </div>
-
+      </div>
+      <h2>Agora, sua bebida</h2>
+      <div class="drinks pratos">
+        <div data-test="drink" onclick="selectDrinks(this)" class="card">
+          <img alt="produto selecionado" src="./img/coca-cola.png" />
+          <h3 data-test="item-name">Coquinha gelada</h3>
+          <p>Lata 350ml</p>
+          <h4 data-test="item-price">R$ 4,90</h4>
+        </div>
+        <div data-test="drink" onclick="selectDrinks(this)" class="card">
+          <img alt="produto selecionado" src="./img/coca-cola.png" />
+          <h3 data-test="item-name">Coquinha gelada</h3>
+          <p>Lata 350ml</p>
+          <h4 data-test="item-price">R$ 4,90</h4>
+        </div>
+        <div data-test="drink" onclick="selectDrinks(this)" class="card">
+          <img alt="produto selecionado" src="./img/coca-cola.png" />
+          <h3 data-test="item-name">Coquinha gelada</h3>
+          <p>Lata 350ml</p>
+          <h4 data-test="item-price">R$ 4,90</h4>
+        </div>
+      </div>
+      <h2>Por fim, sua sobremesa</h2>
+      <div class="desserts pratos">
+        <div data-test="dessert" onclick="selectDesserts(this)" class="card">
+          <img alt="produto selecionado" src="./img/pudim.png" />
+          <h3 data-test="item-name">Pudim</h3>
+          <p>Apenas pudim</p>
+          <h4 data-test="item-price">R$ 7,90</h4>
+        </div>
+        <div data-test="dessert" onclick="selectDesserts(this)" class="card">
+          <img alt="produto selecionado" src="./img/pudim.png" />
+          <h3 data-test="item-name">Pudim</h3>
+          <p>Apenas pudim</p>
+          <h4 data-test="item-price">R$ 7,90</h4>
+        </div>
+        <div data-test="dessert" onclick="selectDesserts(this)" class="card">
+          <img alt="produto selecionado" src="./img/pudim.png" />
+          <h3 data-test="item-name">Pudim</h3>
+          <p>Apenas pudim</p>
+          <h4 data-test="item-price">R$ 7,90</h4>
+        </div>
+      </div>
     </div>
     <footer>
-        <button data-test="order-btn" disabled onclick="showModal()">Selecione os 3 itens<br>para fechar o pedido
-        </button>
+      <button data-test="order-btn" disabled onclick="showModal()">
+        <p>Selecione os 3 itens para fechar o pedido</p>
+      </button>
     </footer>
 
-
-
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
